@@ -6,7 +6,7 @@ public class Stack_insertAtBottom {
         s.push(1);
         s.push(2);
         s.push(3);
-        
+
         int x=9;
 
         insertAtBottom(s,x);

@@ -9,12 +9,7 @@ public class Queue_implementArray {
 
         int[]arr=new int[size];
         boolean isEmpty(){
-            if(rear==size){
-                return false;
-            }
-            else{
-                return true;
-            }
+            return rear==-1;
         }
 
         void Enqueue(int x){
@@ -28,7 +23,7 @@ public class Queue_implementArray {
         }
 
         int Dequeue(){
-            if(isEmpty()){
+            if(!isEmpty()){
                 int ans=arr[front];
                 arr[front]=-1;
                 front++;

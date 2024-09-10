@@ -27,15 +27,26 @@ public class LinkedList_oddEvenSegregate {
     void segregate(){
         Node temp=head;
         ArrayList<Integer>arr=new ArrayList<>();
+//        odd cycle
         while(temp!=null&&temp.next!=null){
             arr.add(temp.data);
             temp=temp.next.next;
         }
+//        edge case
+        if(temp!=null){
+            arr.add(temp.data);
+        }
+//        even cycle
         Node temp1=head.next;
         while(temp1!=null&&temp1.next!=null){
             arr.add(temp1.data );
             temp1=temp1.next.next;
         }
+//        edge case
+        if(temp1!=null){
+            arr.add(temp1.data);
+        }
+//        transfer arraylist to LinkedList
            temp=head;
         for (int i = 0; i < arr.size() ; i++) {
             temp.data=arr.get(i);
@@ -59,6 +70,7 @@ public class LinkedList_oddEvenSegregate {
         list.add(2);
         list.add(3);
         list.add(4);
+        list.add(5);
         list.print();
         list.segregate();
         list.print();
